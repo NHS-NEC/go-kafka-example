@@ -11,11 +11,11 @@ import (
 
 func main() {
 	config := &kafka.ConfigMap{
-		"metadata.broker.list": os.Getenv("CLOUDKARAFKA_BROKERS"),
+		"metadata.broker.list": "dory-01.srvs.cloudkafka.com:9094,dory-02.srvs.cloudkafka.com:9094,dory-03.srvs.cloudkafka.com:9094",
 		"security.protocol":    "SASL_SSL",
 		"sasl.mechanisms":      "SCRAM-SHA-256",
-		"sasl.username":        os.Getenv("CLOUDKARAFKA_USERNAME"),
-		"sasl.password":        os.Getenv("CLOUDKARAFKA_PASSWORD"),
+		"sasl.username":        "twww7nib",
+		"sasl.password":        "0HJaKQnDyy1AUzvDe3RDBcGmXfPeoxm5",
 		"group.id":             os.Getenv("CLOUDKARAFKA_GROUPID"),
 		"default.topic.config": kafka.ConfigMap{"auto.offset.reset": "earliest"},
 		//"debug":                           "generic,broker,security",
